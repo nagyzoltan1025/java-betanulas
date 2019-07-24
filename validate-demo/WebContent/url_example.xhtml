@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+	<h:form>
+		<h:inputText value="#{converterBean.beanUrl}">
+			<f:converter converterId="converter.URLConverter"/>
+		</h:inputText>
+		<h:messages style="color:red"/>
+		<h:commandButton value="Submit" action="url_response"/>
+	</h:form>
+</body>
+
+</html>

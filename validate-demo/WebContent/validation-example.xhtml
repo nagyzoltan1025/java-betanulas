@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+	
+	<h:form>
+		Built in validator:
+		<h:inputText>
+			<f:validateRegex pattern="^\w{4,8}$" />
+		</h:inputText>
+		<br/>
+		Managed Bean validator method:
+		<h:inputText validator="#{validateBean.checkValue}"/>
+		<br/>
+		Validator class:
+		<h:inputText>
+			<f:validator validatorId="temperatureValidator"/>
+		</h:inputText>
+		<br/>
+		<h:messages style="color:red"/>
+		<br/>
+		<h:commandButton value="Click"/>
+	</h:form>
+
+</body>
+
+</html>
